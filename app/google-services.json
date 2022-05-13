@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "430519868240",
+    "project_id": "todo-efbe3",
+    "storage_bucket": "todo-efbe3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430519868240:android:9b826a12b78acb4f84aa55",
+        "android_client_info": {
+          "package_name": "com.rohit.todo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "430519868240-drpk7h64paon76j36q937deplqgri43c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx-C1Jux78_JFfAMs0NKhITiRaOAfHiWY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "430519868240-drpk7h64paon76j36q937deplqgri43c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

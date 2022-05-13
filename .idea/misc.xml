@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/button.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/dialog_edit_bg.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/edit_bg.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/todo_bg.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/toolbar_background.xml" value="0.206" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.35885416666666664" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.35885416666666664" />
+        <entry key="app/src/main/res/layout/dialog_todo.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.35885416666666664" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35885416666666664" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.35885416666666664" />
+        <entry key="app/src/main/res/layout/todo_item.xml" value="0.35885416666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
