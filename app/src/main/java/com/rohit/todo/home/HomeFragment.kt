@@ -42,6 +42,9 @@ class HomeFragment : Fragment() {
         val adapter = TodoRecyclerAdapter()
         binding.todoRecyclerView.adapter = adapter
         viewModel.todoList.observe(viewLifecycleOwner, Observer {
+            if (it.isEmpty()){
+                binding.noTodoText.visibility = View.VISIBLE
+            }
             it?.let {
                 adapter.submitList(it)
             }
@@ -142,6 +145,7 @@ class HomeFragment : Fragment() {
         btnok.setOnClickListener {
             if (todo==null){
                 if (!dialogBinding.et.text.isEmpty()){
+                    binding.noTodoText.visibility = View.GONE
                     progressDialog.show()
                     viewModel.addTodo(dialogBinding.et.text.toString())
                     viewModel.getTodo()

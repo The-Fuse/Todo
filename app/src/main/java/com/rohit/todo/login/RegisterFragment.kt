@@ -26,11 +26,16 @@ class RegisterFragment : Fragment() {
         binding = FragmentRegisterBinding.inflate(inflater)
         auth = FirebaseAuth.getInstance()
         binding.loginButton.setOnClickListener {
-            progressDialog = ProgressDialog(context)
-            progressDialog.setCancelable(false)
-            progressDialog.setMessage("Creating user, please wait...")
-            progressDialog.show()
-            registerUser()
+            if (binding.registerEmail.text.isNotEmpty() && binding.registerPassword.text.isNotEmpty()){
+                progressDialog = ProgressDialog(context)
+                progressDialog.setCancelable(false)
+                progressDialog.setMessage("Creating user, please wait...")
+                progressDialog.show()
+                registerUser()
+            }else{
+                Toast.makeText(context,"Please Enter all fields!",Toast.LENGTH_SHORT).show()
+            }
+
         }
         return binding.root
     }
@@ -46,6 +51,7 @@ class RegisterFragment : Fragment() {
                     Toast.makeText(context, "Registered successfully!", Toast.LENGTH_SHORT).show()
                 }
                 else
+                    progressDialog.cancel()
                     Toast.makeText(context,"Error registering in!", Toast.LENGTH_SHORT).show()
 
             }

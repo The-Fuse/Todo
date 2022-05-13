@@ -40,11 +40,16 @@ class LoginFragment : Fragment() {
         auth = FirebaseAuth.getInstance()
 
         binding.loginButton.setOnClickListener {
-            progressDialog = ProgressDialog(context)
-            progressDialog.setCancelable(false)
-            progressDialog.setMessage("Logging in, please wait...")
-            progressDialog.show()
-            loginByEmail()
+            if (binding.loginEmail.text.isNotEmpty() && binding.loginPassword.text.isNotEmpty()){
+                progressDialog = ProgressDialog(context)
+                progressDialog.setCancelable(false)
+                progressDialog.setMessage("Logging in, please wait...")
+                progressDialog.show()
+                loginByEmail()
+            }else{
+                Toast.makeText(context,"Please Enter all fields!",Toast.LENGTH_SHORT).show()
+            }
+
         }
         binding.registerButton.setOnClickListener {
             this.findNavController()
@@ -88,6 +93,7 @@ class LoginFragment : Fragment() {
                     activity?.finish()
                 }
                 else
+                    progressDialog.cancel()
                     Toast.makeText(context, "Error Logging in!", Toast.LENGTH_SHORT).show()
 
             }
