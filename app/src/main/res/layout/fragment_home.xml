@@ -43,6 +43,7 @@
 
             <ImageView
                 android:id="@+id/logout"
+                android:background="?selectableItemBackground"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -53,39 +54,43 @@
 
       </androidx.appcompat.widget.Toolbar>
 
-      <TextView
-          android:id="@+id/all_task_text"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="16dp"
-          android:layout_marginTop="8dp"
-          android:fontFamily="@font/poppins_medium"
-          android:text="ALL Tasks"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/home_toolbar" />
-
 
       <androidx.recyclerview.widget.RecyclerView
           android:id="@+id/todo_recycler_view"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
+          android:layout_height="0dp"
+          android:clipToPadding="false"
+          android:paddingBottom="8dp"
+          android:paddingTop="8dp"
+          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+          app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/all_task_text"
-          tools:listitem="@layout/todo_item"
-          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+          app:layout_constraintTop_toBottomOf="@+id/home_toolbar"
+          tools:listitem="@layout/todo_item" />
 
       <com.google.android.material.floatingactionbutton.FloatingActionButton
           android:id="@+id/add_todo"
           android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginEnd="16dp"
-          android:layout_marginBottom="16dp"
+          android:layout_height="0dp"
+          android:layout_marginEnd="24dp"
+          android:layout_marginBottom="24dp"
+          android:backgroundTint="@color/white"
           android:clickable="true"
           android:src="@drawable/ic_baseline_add_24"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           tools:ignore="SpeakableTextPresentCheck" />
+
+      <ProgressBar
+          android:id="@+id/progressBar"
+          style="?android:attr/progressBarStyle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="24dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/home_toolbar" />
 
 
    </androidx.constraintlayout.widget.ConstraintLayout>

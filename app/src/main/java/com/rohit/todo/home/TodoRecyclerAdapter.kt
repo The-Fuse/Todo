@@ -1,7 +1,11 @@
 package com.rohit.todo.home
 
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.CheckBox
+import android.widget.ImageView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -26,10 +30,36 @@ class TodoRecyclerAdapter: ListAdapter<Todo,TodoRecyclerAdapter.ViewHolder>(Todo
         fun bind(
             item: Todo
         ) {
-            binding.checkBox.text = item.body.toString()
+            binding.todoContent.setOnClickListener {
+                todoClickListener.onTodoSelected(item,binding.todoContent)
+            }
+            binding.deleteTodo.setOnClickListener {
+                deleteClickListener.onDeleteSelected(item,binding.deleteTodo)
+            }
+            binding.checkBox.setOnClickListener {
+                checkClickListener.onCheckSelected(item,binding.checkBox)
+            }
+            binding.todoBody.text = item.body.toString()
+            binding.checkBox.isChecked = item.status
         }
 
     }
+
+    interface TodoClickListener {
+
+        fun onTodoSelected(todo: Todo, layout: ConstraintLayout)
+    }
+    interface DeleteClickListener {
+        fun onDeleteSelected(todo: Todo, imageView: ImageView)
+    }
+
+    interface CheckClickListener {
+        fun onCheckSelected(todo: Todo, checkBox: CheckBox)
+    }
+    lateinit var todoClickListener: TodoClickListener
+    lateinit var deleteClickListener: DeleteClickListener
+    lateinit var checkClickListener: CheckClickListener
+
 }
 
 class TodoDiffCallBack : DiffUtil.ItemCallback<Todo>() {

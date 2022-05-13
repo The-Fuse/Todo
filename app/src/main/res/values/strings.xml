@@ -2,4 +2,5 @@
     <string name="app_name">Todo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_web_client_id">430519868240-drpk7h64paon76j36q937deplqgri43c.apps.googleusercontent.com</string>
 </resources>

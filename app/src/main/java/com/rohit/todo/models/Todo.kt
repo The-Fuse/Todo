@@ -4,5 +4,6 @@ data class Todo(
 
     val body: String = "",
     val status: Boolean = false,
-    val id: String=System.currentTimeMillis().toString(),
+    val timeStamp: String = System.currentTimeMillis().toString(),
+    val id: String = System.currentTimeMillis().toString(),
 )

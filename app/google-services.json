@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "430519868240-9f5mi5iqt9m4ge6bsfbr293osfkgp1fo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rohit.todo",
+            "certificate_hash": "a9bc52f93c3faba6ae071c0d05eb1287deb64a06"
+          }
+        },
+        {
           "client_id": "430519868240-drpk7h64paon76j36q937deplqgri43c.apps.googleusercontent.com",
           "client_type": 3
         }
